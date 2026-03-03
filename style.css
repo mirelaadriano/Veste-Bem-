@@ -1,0 +1,302 @@
+/*=============================================
+ RESETE BASICO, DEIXA O LAYOUT MAIS PREVISIVEL
+ ==============================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*==================
+   TOPO, HEADER
+====================*/
+
+.menu {
+   position: relative;
+   display: flex;
+   align-items: center;
+}
+
+.titulo {
+    margin-right: auto; /* empurra só o título pra esquerda */
+	color: #694D82;
+}
+
+/* usado para centralizar a barra de pesquisa*/
+.barra {
+    position: static;
+    transform: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.barra input {
+  width: 90%;
+  max-width: 450px; /* limite máximo */
+  padding: 7px;
+  border-radius: 30px;
+ }
+
+.barra button {
+  padding: 5px 5px;
+  justify-content: center;
+  border-radius:  7px;
+ 
+}
+
+
+
+/*============================
+    MENU, NAV
+=============================*/
+nav ul {
+	list-style: none; /*tira o ponto*/
+	display: flex;
+	justify-content: flex-start; /*joga para o lado esquerdo*/
+	gap: 10px; /* espaço entre links */
+	padding: 0; /*remove o recuo automático*/
+	
+}
+
+nav a {
+	
+	display: block;
+	padding: 10px 10px;
+}
+/*serve para quando passar o mause encima mudar a cor*/
+nav ul li a:hover {
+  color: #FFE079;
+   background-color: #694D82;
+}
+
+.menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+/*===========================
+ITENS EDITADOS EM CONJUNTO
+=============================*/
+
+header, nav {
+    background-color: #FBE9BB;
+	
+} 
+
+/*====================
+     DIV ESTAÇÕES
+=====================*/
+.estacoes {
+  display: flex; /*para deixar lado a lado*/
+  justify-content: center; /*Controla o alinhamento horizontal.*/
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap; /*Quando não cabe mais na linha, o item passa para a linha de baixo automaticamente*/
+}
+
+.lado {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /*espaçamento entre as linhas*/
+}
+.centro {
+  text-align: center;
+}
+.card {
+  background-color: #6E4C86;
+  color: #FBE9BB; /*cor do texto*/
+  padding: 25px; /*Espaço interno.*/
+  border-radius: 20px; /*Arredonda os cantos.*/
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+  border: 3px solid #FBE9BB;
+}
+
+
+.centro img {
+  width: 100%;
+  max-width: 350px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+
+/*======================
+        DIV ROUPAS
+==========================*/
+
+.closet {
+  justify-content: space-between; /*Controla o alinhamento horizontal.*/
+  align-items: center;
+  padding: 20px;
+	
+}
+
+
+.encima {
+	display: flex;
+	text-align: center;
+	 justify-content: center; /*centraliza a imagem*/
+	 flex-wrap: wrap;
+    gap: 15px;
+}
+
+.embaixo {
+	display: flex;
+	text-align: center; /*centralizar texto*/
+	 justify-content: center;
+	 margin: 20px; /*distancia entre img*/
+	 flex-wrap: wrap;
+     gap: 15px;
+} 
+
+.item p {
+	font-family: Inclusive Sans; /*tipo da fonte*/
+	 font-size: 20px; /*tamanho da fonte*/
+	 margin: 5px;
+}
+/*cresce levemente quando passa o mouse.*/
+.closet:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+
+
+/*======================
+    DIV INDICADOS
+========================*/
+
+.indicados {
+    background-color: #FBE9BB;
+    gap: 20px; /* espaço entre os cards */
+    padding: 20px; /* espaço interno */
+    width: 100%;  /* ocupa toda largura disponível */
+    max-width: 900px;   /* limite máximo igual ao seu */
+    justify-content: center; /* centraliza itens */
+    margin: auto; /* centraliza */
+    align-items: center;
+	display: flex;
+	flex-wrap: wrap; /*Quando não cabe mais na linha, o item passa para a linha de baixo automaticamente*/
+}
+
+.dado {
+    display: flex; /*para deixar lado a lado*/
+    flex-direction: column;   /* imagem em cima */
+    justify-content: center; /*Controla o alinhamento horizontal.*/
+    padding: 50px;
+    align-items: center;/* centraliza */
+    text-align: center;
+    flex: 1 1 200px; /* responsividade automática */
+}
+
+.dado p {
+	font-family: Inclusive Sans; /*tipo da fonte*/
+	 font-size: 25px; /*tamanho da fonte*/
+	 margin: 3px;
+	 text-align: center;
+	 flex-wrap: wrap; /*Quando não cabe mais na linha, o item passa para a linha de baixo automaticamente*/
+	 color: #694D82;
+	 
+}
+
+.dado img {
+	margin-bottom: 10px; /* espaço entre imagem e texto */
+	width: 100%;        /* Define a largura fixa */
+    height: 300px;       /* Define a altura fixa */
+    object-fit: cover;   /* Faz a imagem preencher sem deformar */	
+	max-width: 300px;   /* limite máximo */
+	border: 5px  solid #694D82;
+}
+
+h2 {
+	text-align: center; /*centraliza o texto horizontalmente.*/
+	margin: 20px auto; /* espaço em cima e embaixo + centraliza */
+	font-size: clamp(20px, 4vw, 28px); /* tamanho flexível */
+    color: #FFE079; /*cor da letra*/
+	background-color: #694D82;
+	/*=============================================*/
+	/*Isso sozinho já deixa 70% do site responsivo.*/
+	width: 100%; /*largura da área pintada.*/ 
+    max-width: 900px;  /* limite máximo no PC */
+	/*=========================================*/
+    padding: 12px;    /* altura automática */
+}
+
+
+/*====================
+    DIVI RODAPE
+=======================*/
+.rodape {
+	background-color: #694D82;
+    padding: 40px 80px; /*espaço interno*/
+	
+}
+
+.box {
+	background-color: #EDEDED;
+	max-width: 1100px; /*limita largura no PC*/
+	margin: auto;
+	border-radius: 40px; /*cantos arredondados*/
+	padding: 50px; /*altura*/
+	display: flex; /*coloca colunas lado a lado*/
+	flex-wrap: wrap; /*quebra linha no celular*/
+	justify-content: space-between;	 /*distribui espaço*/
+}
+
+.coluna {
+  flex-direction: column;
+  min-width: 180px; /*evita quebrar feio*/
+	
+}
+
+.redes img {
+  width: 22px;
+  margin-right: 8px;
+}
+.new {
+  display: flex;
+  margin-top: 25px;
+}
+
+.new input {
+  padding: 8px;
+  border: 1px solid #FFE079;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.new button {
+  background-color: #FFE079;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer; /*mãozinha*/
+}
+
+
+
+@media (max-width: 768px) /*RESPONSIVIDADE*/ {
+div, dado {
+flex-direction: column;
+align-items: center;
+}
+
+footer-box {
+    flex-direction: column;
+    gap: 25px;
+  }
+ new {
+    flex-direction: column;
+  }
+ new input,
+ new button {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
