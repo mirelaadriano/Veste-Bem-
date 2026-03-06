@@ -7,6 +7,7 @@
   box-sizing: border-box;
 }
 
+
 /*==================
    TOPO, HEADER
 ====================*/
@@ -14,12 +15,17 @@
 .menu {
    position: relative;
    display: flex;
+   justify-content: space-between;
    align-items: center;
+  
 }
 
 .titulo {
     margin-right: auto; /* empurra só o título pra esquerda */
 	color: #694D82;
+	font-size: 30px;
+   justify-content: space-between;
+  
 }
 
 /* usado para centralizar a barra de pesquisa*/
@@ -50,30 +56,24 @@
 /*============================
     MENU, NAV
 =============================*/
-nav ul {
-	list-style: none; /*tira o ponto*/
-	display: flex;
-	justify-content: flex-start; /*joga para o lado esquerdo*/
-	gap: 10px; /* espaço entre links */
-	padding: 0; /*remove o recuo automático*/
-	
-}
 
-nav a {
-	
-	display: block;
-	padding: 10px 10px;
-}
 /*serve para quando passar o mause encima mudar a cor*/
 nav ul li a:hover {
-  color: #FFE079;
+   color: #FFE079;
    background-color: #694D82;
 }
 
-.menu {
-    flex-direction: column;
-    gap: 10px;
-  }
+
+  
+.menu-links ul {
+  display: flex; /*coloca os <li> lado a lado*/
+  list-style: none; /*remove bolinhas*/
+  gap: 20px; /*espaço entre links*/
+}
+.menu-icons img {
+  width: 20px;
+  margin-left: 10px; /*espaço entre ícones*/
+}
 
 /*===========================
 ITENS EDITADOS EM CONJUNTO
@@ -93,31 +93,36 @@ header, nav {
   align-items: center;
   padding: 10px;
   flex-wrap: wrap; /*Quando não cabe mais na linha, o item passa para a linha de baixo automaticamente*/
+font-family: ariel; /*tipo da fonte*/
 }
 
 .lado {
   display: flex;
   flex-direction: column;
   gap: 15px; /*espaçamento entre as linhas*/
+  font-family: ariel; /*tipo da fonte*/
 }
 .centro {
   text-align: center;
 }
+ 
 .card {
   background-color: #6E4C86;
   color: #FBE9BB; /*cor do texto*/
   padding: 25px; /*Espaço interno.*/
-  border-radius: 20px; /*Arredonda os cantos.*/
+  border-radius: 40px; /*Arredonda os cantos.*/
   width: 200px;
   text-align: center;
   font-weight: bold;
   border: 3px solid #FBE9BB;
+  margin: 4px;font-family: ariel; /*tipo da fonte*/
 }
 
 
 .centro img {
-  width: 100%;
+  width: 90%;
   max-width: 350px;
+  margin: 6px;
 }
 
 .card:hover {
@@ -131,33 +136,36 @@ header, nav {
 ==========================*/
 
 .closet {
-  justify-content: space-between; /*Controla o alinhamento horizontal.*/
+  display: flex;
+  justify-content: center;
   align-items: center;
   padding: 20px;
-	
 }
 
 
 .encima {
-	display: flex;
-	text-align: center;
+	 display: flex;
+	 text-align: center;
 	 justify-content: center; /*centraliza a imagem*/
 	 flex-wrap: wrap;
-    gap: 15px;
+     gap: 15px;
+	 color: #6E4C86;
+	
 }
 
 .embaixo {
-	display: flex;
-	text-align: center; /*centralizar texto*/
+	 display: flex;
+	 text-align: center; /*centralizar texto*/
 	 justify-content: center;
 	 margin: 20px; /*distancia entre img*/
 	 flex-wrap: wrap;
      gap: 15px;
+	 color: #6E4C86;
 } 
 
 .item p {
-	font-family: Inclusive Sans; /*tipo da fonte*/
-	 font-size: 20px; /*tamanho da fonte*/
+	font-family: ariel; /*tipo da fonte*/
+	 font-size: 22px; /*tamanho da fonte*/
 	 margin: 5px;
 }
 /*cresce levemente quando passa o mouse.*/
@@ -173,47 +181,62 @@ header, nav {
 ========================*/
 
 .indicados {
-    background-color: #FBE9BB;
-    gap: 20px; /* espaço entre os cards */
+    background-color: #694D82;
+    gap: 10px; /* espaço entre os cards */
     padding: 20px; /* espaço interno */
     width: 100%;  /* ocupa toda largura disponível */
-    max-width: 900px;   /* limite máximo igual ao seu */
+    max-width: 1300px;   /* limite máximo igual ao seu */
     justify-content: center; /* centraliza itens */
     margin: auto; /* centraliza */
     align-items: center;
 	display: flex;
 	flex-wrap: wrap; /*Quando não cabe mais na linha, o item passa para a linha de baixo automaticamente*/
+	border: 3px  solid #FFE079;
+	border-radius: 35px; /*Arredonda os cantos.*/
 }
+
+
+
+
+
+
 
 .dado {
     display: flex; /*para deixar lado a lado*/
     flex-direction: column;   /* imagem em cima */
     justify-content: center; /*Controla o alinhamento horizontal.*/
-    padding: 50px;
+    padding: 20px;
     align-items: center;/* centraliza */
     text-align: center;
-    flex: 1 1 200px; /* responsividade automática */
+	order: 3px  solid #FFE079;
+ 
+	
+	
 }
 
 .dado p {
-	font-family: Inclusive Sans; /*tipo da fonte*/
+	font-family: 'Inclusive Sans', sans-serif; /*tipo da fonte*/
 	 font-size: 25px; /*tamanho da fonte*/
 	 margin: 3px;
 	 text-align: center;
 	 flex-wrap: wrap; /*Quando não cabe mais na linha, o item passa para a linha de baixo automaticamente*/
-	 color: #694D82;
+	 color: #FFE079;;
 	 
 }
 
 .dado img {
-	margin-bottom: 10px; /* espaço entre imagem e texto */
-	width: 100%;        /* Define a largura fixa */
-    height: 300px;       /* Define a altura fixa */
-    object-fit: cover;   /* Faz a imagem preencher sem deformar */	
-	max-width: 300px;   /* limite máximo */
-	border: 5px  solid #694D82;
+	
+	width: 310px;        /* Define a largura fixa */
+    height: 270px;       /* Define a altura fixa */
+	max-width: 310px;   /* limite máximo */
+	 padding: 10px;    /* altura automática */
+	border-radius: 40px; /*Arredonda os cantos.*/
+	border: 3px  solid #FFE079;
+	
+	
 }
 
+/*titulo, vendedores indicados*/
 h2 {
 	text-align: center; /*centraliza o texto horizontalmente.*/
 	margin: 20px auto; /* espaço em cima e embaixo + centraliza */
@@ -226,6 +249,8 @@ h2 {
     max-width: 900px;  /* limite máximo no PC */
 	/*=========================================*/
     padding: 12px;    /* altura automática */
+	border-radius: 40px; /*Arredonda os cantos.*/
+	border: 3px  solid #FFE079;
 }
 
 
@@ -252,7 +277,7 @@ h2 {
 .coluna {
   flex-direction: column;
   min-width: 180px; /*evita quebrar feio*/
-	
+  
 }
 
 .redes img {
@@ -281,22 +306,26 @@ h2 {
 
 
 
-@media (max-width: 768px) /*RESPONSIVIDADE*/ {
-div, dado {
+@media (max-width: 768px) {
+
+.dado {
 flex-direction: column;
 align-items: center;
 }
 
-footer-box {
-    flex-direction: column;
-    gap: 25px;
-  }
- new {
-    flex-direction: column;
-  }
- new input,
- new button {
-    width: 100%;
-    border-radius: 5px;
-  }
+.box {
+flex-direction: column;
+gap: 25px;
+}
+
+.new {
+flex-direction: column;
+}
+
+.new input,
+.new button {
+width: 100%;
+border-radius: 5px;
+}
+
 }
