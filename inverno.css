@@ -1,0 +1,158 @@
+/*=============================================
+ RESETE BASICO, DEIXA O LAYOUT MAIS PREVISIVEL
+ ==============================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {	
+	text-decoration: none; /*tira o risco de baixo do nome q direciona o link*/	
+	color: white;
+}
+
+/*==================
+   TOPO, HEADER
+====================*/
+
+.menu {
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ 
+}
+
+.titulo {
+    margin-right: auto; /* empurra só o título pra esquerda */
+	color: #FFDC83;
+	font-size: 30px;
+   justify-content: space-between;
+  
+  
+}
+
+/* usado para centralizar a barra de pesquisa*/
+.barra {
+    position: static;
+    transform: none;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.barra input {
+  width: 100%;
+  max-width:600px; /* limite máximo */
+  padding: 7px;
+  background-color: white;
+ }
+ .barra input::placeholder {
+  color: #694D82;
+}
+.barra input::placeholder {
+  color: #694D82;
+ }
+
+.barra button {
+  padding: 5px 5px;
+  justify-content: center;
+  background-color: #9170AD;
+ 
+}
+h1{
+	padding: 7px;
+	
+}
+
+/*============================
+    MENU, NAV
+=============================*/
+
+/*serve para quando passar o mause encima mudar a cor*/
+nav ul li a:hover {
+   color: #FFE079;
+  
+}
+
+.menu-links ul {
+  display: flex; /*coloca os <li> lado a lado*/
+  list-style: none; /*remove bolinhas*/
+  gap: 20px; /*espaço entre links*/
+  
+}
+.menu-icons img {
+  width: 20px;
+  margin-left: 10px; /*espaço entre ícones*/
+}
+
+/*===========================
+ITENS EDITADOS EM CONJUNTO
+=============================*/
+
+header, nav {
+    background-color: #6A3E72;
+	
+} 
+
+/*==============================
+    IMAGENS DOS FAVS
+================================*/
+
+.produtos {
+  display: flex;
+  flex-wrap: wrap; /* quando não caber, desce */
+  justify-content: center; /* centraliza itens */
+  gap: 90px; /* espaço entre produtos */
+  max-width: 1495px;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 30px;
+}
+
+.produto {
+  
+  width: 250px;
+  text-align: center;
+ 
+
+}	
+
+.produto img {
+	width: auto;
+	height: 340px;
+	border-radius: 13px;
+	
+}
+
+.descricao {
+	margin: 5px 0;
+	text-align: justify;
+
+}
+
+.preco {
+   
+	font-size: 20px;
+	font-weight: bold;
+	color: orange;
+	text-align: justify;
+}
+ 
+.pecas {
+	
+	font-size: 30px;
+	text-align: center;
+	color:#6A3E72;
+	margin: 10px;
+	padding:10px;
+	
+}
+
+hr {
+	
+  border: none;              /* remove padrão do navegador */
+  height: 5px;               /* grossura da linha */
+  background-color: #6A3E72; /* cor da linha */
+  border-radius: 30px;
+}

@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*=======================
+     RANKING
+========================*/
+
+h1 {
+font-size: 70px;
+text-align: center;
+margin: auto;
+background-color: #6A3E72;
+color: #FFE079;
+width: 100%;
+
+}	
+
+a {	
+	text-decoration: none; /*tira o risco de baixo do nome q direciona o link*/	
+}
+
+h2 {
+	font-size: 25px;
+	text-align: center;
+	padding: 20px;
+	color: #FFE079;
+	background-color:#6A3E72;
+	margin: auto;
+	
+}
+
+.dado {
+	font-size: 20px;
+	text-align: left;
+	padding: 20px;
+	margin: 5px;
+	color: black;
+	
+}
+
+hr {
+	
+  border: none;              /* remove padrão do navegador */
+  height: 5px;               /* grossura da linha */
+  background-color: #6A3E72; /* cor da linha */
+  border-radius: 30px;
+}

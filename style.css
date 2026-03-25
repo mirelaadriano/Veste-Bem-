@@ -1,0 +1,393 @@
+/*=============================================
+ RESETE BASICO, DEIXA O LAYOUT MAIS PREVISIVEL
+ ==============================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*==================
+   TOPO, HEADER
+====================*/
+
+.menu {
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ 
+}
+
+.titulo {
+    margin-right: auto; /* empurra só o título pra esquerda */
+	color: #FFDC83;
+	font-size: 30px;
+   justify-content: space-between;
+  
+  
+}
+
+/* usado para centralizar a barra de pesquisa*/
+.barra {
+    position: static;
+    transform: none;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.barra input {
+  width: 100%;
+  max-width:600px; /* limite máximo */
+  padding: 7px;
+  background-color: white;
+ }
+ .barra input::placeholder {
+  color: #694D82;
+}
+.barra input::placeholder {
+  color: #694D82;
+ }
+
+.barra button {
+  padding: 5px 5px;
+  justify-content: center;
+  background-color: #9170AD;
+ 
+}
+h1{
+	padding: 7px;
+	
+}
+
+/*============================
+    MENU, NAV
+=============================*/
+
+/*serve para quando passar o mause encima mudar a cor*/
+nav ul li a:hover {
+   color: #FFE079;
+  
+}
+
+.menu-links ul {
+  display: flex; /*coloca os <li> lado a lado*/
+  list-style: none; /*remove bolinhas*/
+  gap: 20px; /*espaço entre links*/
+  
+}
+.menu-icons img {
+  width: 20px;
+  margin-left: 10px; /*espaço entre ícones*/
+}
+
+/*===========================
+ITENS EDITADOS EM CONJUNTO
+=============================*/
+
+header, nav {
+    background-color: #6A3E72;
+	
+} 
+
+/*====================
+     DIV ESTAÇÕES
+=====================*/
+.estacoes {
+  display: flex; /*para deixar lado a lado*/
+  justify-content: center; /*Controla o alinhamento horizontal.*/
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap; /*Quando não cabe mais na linha, o item passa para a linha de baixo automaticamente*/
+  font-family: ariel; /*tipo da fonte*/
+}
+
+.lado {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /*espaçamento entre as linhas*/
+  font-family: ariel; /*tipo da fonte*/
+  font-size: 20px;
+}
+.centro {
+   text-align: center;
+    height: auto;
+	width: 430px;
+}
+ 
+.card {
+  background-color: #FBE9BB;
+  color: #6A3E72; /*cor do texto*/
+  padding: 30px; /*Espaço interno.*/
+  border-radius: 15px; /*Arredonda os cantos.*/
+  width: 200px;
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  border: 5px solid #FBE9BB;
+  margin: 4px;font-family: ariel; /*tipo da fonte*/
+}
+
+
+.centro img {
+  width: 90%;
+  max-width: 350px;
+  margin: 6px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+
+/*======================
+        DIV ROUPAS
+==========================*/
+
+.closet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+
+.encima {
+	 display: flex;
+	 text-align: center;
+	 justify-content: center; /*centraliza a imagem*/
+	 flex-wrap: wrap;
+     gap: 15px;
+	 color: #6A3E72;
+	
+}
+
+.embaixo {
+	 display: flex;
+	 text-align: center; /*centralizar texto*/
+	 justify-content: center;
+	 margin: 20px; /*distancia entre img*/
+	 flex-wrap: wrap;
+     gap: 15px;
+	 color: #6A3E72;
+	 
+} 
+
+.item p {
+	font-family: ariel; /*tipo da fonte*/
+	 font-size: 26px; /*tamanho da fonte*/
+	 margin: 5px;
+}
+/*cresce levemente quando passa o mouse.*/
+.closet:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+
+
+/*======================
+    DIV INDICADOS
+========================*/
+
+.indicados {
+   
+    gap: 15px; /* espaço entre os cards */
+    padding: 30px; /* espaço interno */
+    width: 100%;  /* ocupa toda largura disponível */
+    max-width: 1300px;   /* limite máximo igual ao seu */
+    justify-content: center; /* centraliza itens */
+    margin: auto; /* centraliza */
+    align-items: center;
+	display: flex;
+	flex-wrap: wrap; /*Quando não cabe mais na linha, o item passa para a linha de baixo automaticamente*/
+	border-radius: 80px; /*Arredonda os cantos.*/
+}
+
+
+
+
+
+
+
+.dado {
+    display: flex; /*para deixar lado a lado*/
+    flex-direction: column;   /* imagem em cima */
+    justify-content: center; /*Controla o alinhamento horizontal.*/
+    padding: 20px;
+    align-items: center;/* centraliza */
+    text-align: center;	
+}
+a {	
+	text-decoration: none; /*tira o risco de baixo do nome q direciona o link*/	
+	 color: white;
+}
+
+
+
+.dado img {
+	
+	width: 270px;        /* Define a largura fixa */
+    height: 230px;       /* Define a altura fixa */
+	max-width: 310px;   /* limite máximo */
+	 padding: 12px;    /* altura automática */
+	border-radius: 60px; /*Arredonda os cantos.*/
+	border: 7px  solid #6A3E72;
+	
+	
+}
+
+/*titulo, vendedores indicados*/
+h2 {
+	text-align: center; /*centraliza o texto horizontalmente.*/
+	margin: 30px auto; /* espaço em cima e embaixo + centraliza */
+	font-size: clamp(20px, 4vw, 28px); /* tamanho flexível */
+    color: #6A3E72; /*cor da letra*/
+	
+	/*=============================================*/
+	/*Isso sozinho já deixa 70% do site responsivo.*/
+	width: 100%; /*largura da área pintada.*/ 
+    max-width: 900px;  /* limite máximo no PC */
+	/*=========================================*/
+    padding: 12px;    /* altura automática */
+	border-radius: 40px; /*Arredonda os cantos.*/
+	border: 5px  solid #FFE079;
+}
+
+/*=======================
+    RECOMENDADOS
+========================*/	
+
+.recomendado {
+	
+	color: black;
+	font-size: 26px;
+	color: #6A3E72;
+	margin: 10px;
+}
+
+.produtos {
+  display: flex;
+  flex-wrap: wrap; /* quando não caber, desce */
+  justify-content: center; /* centraliza itens */
+  gap: 90px; /* espaço entre produtos */
+  max-width: 1495px;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 30px;
+}
+
+.produto {
+  
+  width: 250px;
+  text-align: center;
+ 
+
+}	
+
+.produto img {
+	width: auto;
+	height: 340px;
+	border-radius: 13px;
+	
+}
+
+.descricao {
+	margin: 5px 0;
+	text-align: justify;
+
+}
+
+.preco {
+   
+	font-size: 20px;
+	font-weight: bold;
+	color: orange;
+	text-align: justify;
+}
+hr {
+	
+  border: none;              /* remove padrão do navegador */
+  height: 5px;               /* grossura da linha */
+  background-color: #6A3E72; /* cor da linha */
+  border-radius: 30px;
+}
+
+/*====================
+    DIVI RODAPE
+=======================*/
+.rodape {
+	background-color: #6A3E72;
+    padding: 40px 80px; /*espaço interno*/
+	
+}
+
+.box {
+	background-color: #EDEDED;
+	max-width: 1100px; /*limita largura no PC*/
+	margin: auto;
+	border-radius: 40px; /*cantos arredondados*/
+	padding: 50px; /*altura*/
+	display: flex; /*coloca colunas lado a lado*/
+	flex-wrap: wrap; /*quebra linha no celular*/
+	justify-content: space-between;	 /*distribui espaço*/
+}
+
+.coluna {
+  flex-direction: column;
+  min-width: 180px; /*evita quebrar feio*/
+  
+}
+
+.redes img {
+  width: 22px;
+  margin-right: 8px;
+}
+.new {
+  display: flex;
+  margin-top: 25px;
+}
+
+.new input {
+  padding: 8px;
+  border: 1px solid #FFE079;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.new button {
+  background-color: #FFE079;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer; /*mãozinha*/
+}
+
+
+
+@media (max-width: 768px) {
+
+.dado {
+flex-direction: column;
+align-items: center;
+}
+
+.box {
+flex-direction: column;
+gap: 25px;
+}
+
+.new {
+flex-direction: column;
+}
+
+.new input,
+.new button {
+width: 100%;
+border-radius: 5px;
+}
+
+}
